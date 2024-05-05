@@ -101,8 +101,8 @@ if __name__ == '__main__':
     args = arg_parser.parse_args()
     args.session = session
 
-    # schedule.every(30).minutes.do(main, args)
-    schedule.every(30).seconds.do(main, args)  # for testing
+    schedule.every(30).minutes.do(main, args)
+    # schedule.every(30).seconds.do(main, args)  # for testing
 
     while True:
         schedule.run_pending()
